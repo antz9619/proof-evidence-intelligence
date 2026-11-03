@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#132e29">
+  <title data-i18n="proof_decision_theater_d03203">PROOF — Teatro de decisiones</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/theater.css">
+  <link rel="stylesheet" href="/i18n.css">
+  <script src="/i18n-catalogs.js" defer></script>
+  <script src="/i18n.js" defer></script>
+  <script src="/theater.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#theater"><span data-i18n="ir_a_las_evidencias_bf6fd1">Ir a las evidencias</span></a>
+  <aside id="provenance-bar" class="provenance-bar" aria-label="Procedencia de la evidencia" hidden data-i18n-aria-label="procedencia_de_la_evidencia_449f7e">
+    <div class="provenance-inner"><strong id="provenance-label"></strong><span id="provenance-case" class="mono"></span><span class="provenance-limit"><span data-i18n="solo_documental_sin_cierre_automatico_83a425">SOLO DOCUMENTAL · SIN CIERRE AUTOMÁTICO</span></span></div>
+  </aside>
+  <div class="page">
+    <header class="masthead">
+      <a href="/" class="brand" aria-label="PROOF, inicio" data-i18n-aria-label="proof_inicio_8c0093">proof<span>.</span></a>
+      <div class="edition"><strong class="evidence-identity" lang="en" data-i18n="evidence_intelligence_brand">EVIDENCE INTELLIGENCE</strong>PUNTA DE LANZA <span>/</span> <span data-i18n="decision_theater_1e4c1c">TEATRO DE DECISIONES</span></div>
+      <div class="offline"><span class="dot"></span> <span data-i18n="reproduccion_offline_7e83d2">REPRODUCCIÓN SIN CONEXIÓN</span></div>
+    <nav class="language-switch" aria-label="Idioma de la interfaz" data-i18n-aria-label="language_selector"><button type="button" data-language="es" lang="es" aria-pressed="true" aria-label="Cambiar a español" data-i18n-aria-label="language_es">ES</button><button type="button" data-language="en" lang="en" aria-pressed="false" aria-label="Cambiar a inglés" data-i18n-aria-label="language_en">EN</button></nav></header>
+    <section class="hero" aria-labelledby="headline">
+      <div class="hero-main"><p class="eyebrow"><span data-i18n="la_ia_interpreta_la_evidencia_manda_999048">LA IA INTERPRETA. LA EVIDENCIA MANDA.</span></p>
+        <h1 id="headline"><span data-i18n="ai_can_be_wrong_3db260">La IA puede equivocarse.</span><br><em><span data-i18n="your_decisions_shouldn_t_be_503a43">Tus decisiones no deberían.</span></em></h1>
+      </div>
+      <div class="hero-note"><span class="note-index">01—04</span><p><span data-i18n="tres_respuestas_reales_97974d">Tres respuestas reales.</span><br><span data-i18n="dos_errores_que_no_pasan_b17938">Dos errores que no pasan.</span><br><span data-i18n="una_decision_que_se_puede_explicar_0d514f">Una decisión que se puede explicar.</span></p><small><span data-i18n="y_un_desafio_el_comprobante_de_otro_envio_a9be32">Y un desafío: el comprobante de otro envío.</span></small></div>
+    </section>
+    <div class="intro-line"><span><span data-i18n="no_es_una_promesa_de_ia_infalible_1926bd">NO ES UNA PROMESA DE IA INFALIBLE.</span></span><p><span data-i18n="es_una_demostracion_de_lo_que_ocurre_cuando_la_ia_se_f67efa">Es una demostración de lo que ocurre cuando la IA se equivoca.</span></p></div>
+    <nav class="experience-switch" aria-label="Modo de demostración" data-i18n-aria-label="modo_de_demostracion_31610f">
+      <button id="challenge-toggle" aria-pressed="false" disabled><span data-i18n="entrar_a_proof_challenge_da3de0">Entrar al DESAFÍO PROOF</span> <span aria-hidden="true">↗</span></button>
+      <span><span data-i18n="tu_veredicto_primero_despues_la_evidencia_a4e980">Tu veredicto primero. Después, la evidencia.</span></span>
+    </nav>
+    <section id="challenge-intro" class="challenge-intro" hidden aria-labelledby="challenge-title">
+      <div><p class="eyebrow"><span data-i18n="proof_challenge_demo_offline_c866d7">DESAFÍO PROOF / REPRODUCCIÓN SIN CONEXIÓN</span></p><h2 id="challenge-title"><span data-i18n="can_you_fool_proof_c7140d">¿PODÉS ENGAÑAR A PROOF?</span></h2><p><span data-i18n="lee_el_expediente_elegi_tu_veredicto_descubri_que_se_934d8a">Leé el expediente. Elegí tu veredicto. Descubrí qué se puede demostrar.</span></p></div>
+      <nav class="challenge-rounds" aria-label="Dos rondas del desafío" data-i18n-aria-label="dos_rondas_del_desafio_04a581">
+        <button data-challenge-case="PM01-07" aria-pressed="false"><small><span data-i18n="ronda_a_e884bc">RONDA A</span></small><strong><span data-i18n="the_trap_3b3258">La trampa</span></strong></button>
+        <button data-challenge-case="PM01-02" aria-pressed="false"><small><span data-i18n="ronda_b_b9d923">RONDA B</span></small><strong><span data-i18n="the_proof_dc72e4">La prueba</span></strong></button>
+      </nav>
+    </section>
+    <section id="challenge-reveal" class="challenge-reveal" hidden aria-labelledby="reveal-title" tabindex="-1">
+      <header><p class="eyebrow"><span data-i18n="el_veredicto_frente_a_la_evidencia_a15b2e">EL VEREDICTO FRENTE A LA EVIDENCIA</span></p><h2 id="reveal-title"><span data-i18n="lo_que_se_puede_demostrar_b73870">Lo que se puede demostrar.</span></h2><p id="verdict-comparison" role="status"></p></header>
+      <div class="reveal-grid">
+        <article class="human-card"><p class="eyebrow"><span data-i18n="your_verdict_d22cf2">TU VEREDICTO</span></p><h3 id="human-verdict"></h3><p><span data-i18n="una_eleccion_de_esta_sesion_no_es_un_hecho_ni_una_au_492ea1">Una elección de esta sesión. No es un hecho ni una autorización operativa.</span></p></article>
+        <article class="proof-card"><p class="eyebrow"><span data-i18n="proof_s_verdict_131a9c">EL VEREDICTO DE PROOF</span></p><h3 id="proof-verdict"></h3><details class="technical-record" data-technical="true"><summary data-i18n="view_original_codes">Ver códigos y controles originales</summary><code id="proof-verdict-code" data-technical="true"></code></details><p id="verdict-limit"></p></article>
+        <article class="evidence-card"><p class="eyebrow"><span data-i18n="the_evidence_that_decided_it_14aab8">LA PRUEBA DECISIVA</span></p><div id="decisive-evidence"></div></article>
+      </div>
+      <details class="reconsider" open><summary><span data-i18n="que_evidencia_necesitariamos_para_reconsiderar_la_de_7c5e2e">¿Qué evidencia necesitaríamos para reconsiderar la decisión?</span></summary><ul id="reconsider-evidence"></ul></details>
+      <button id="next-round" class="replay"><span data-i18n="ronda_b_the_proof_f5173a">Ronda B · La prueba →</span></button>
+    </section>
+    <nav id="case-tabs" class="case-tabs" aria-label="Cuatro casos de evidencia" data-i18n-aria-label="cuatro_casos_de_evidencia_05f1b4"></nav>
+    <section class="case-context" aria-label="Contexto y ejecución" data-i18n-aria-label="contexto_y_ejecucion_d609ff">
+      <div><div class="badges"><span id="origin-label" class="tag"><span data-i18n="cargando_evidencia_f28ae3">Cargando evidencia</span></span><span class="tag synthetic"><span data-i18n="documentos_sinteticos_753dac">DOCUMENTOS SINTÉTICOS</span></span><span id="case-id" class="mono"></span></div><h2 id="case-title"><span data-i18n="preparando_el_expediente_fb9f05">Preparando el expediente…</span></h2><p id="origin-detail"></p></div>
+      <button id="replay" class="replay" disabled><span data-i18n="reproducir_evaluacion_7dfc72">Reproducir evaluación</span> <span aria-hidden="true">→</span></button>
+    </section>
+    <p id="error" class="error" role="alert" hidden></p>
+    <details id="theater-detail" class="theater-detail" open>
+      <summary id="theater-detail-label" hidden><span data-i18n="ver_expediente_interpretacion_y_controles_completos_586d12">Ver expediente, interpretación y controles completos</span></summary>
+    <nav class="mobile-steps" aria-label="Ir a una etapa" data-i18n-aria-label="ir_a_una_etapa_221865"><a href="#evidence-column"><span data-i18n="01_evidencia_75f3be">01 Evidencia</span></a><a href="#meta-column"><span data-i18n="02_interpretacion_4daecd">02 Interpretación</span></a><a href="#proof-column"><span data-i18n="03_decision_1d14de">03 Decisión</span></a></nav>
+    <main id="theater" class="theater" aria-busy="true">
+      <section id="evidence-column" class="column evidence-column" aria-labelledby="evidence-heading">
+        <header class="column-heading"><span class="step">01</span><div><p><span data-i18n="la_fuente_becdd8">LA FUENTE</span></p><h3 id="evidence-heading"><span data-i18n="evidencia_original_5ff515">Evidencia original</span></h3></div><span class="flow-arrow" aria-hidden="true">→</span></header>
+        <div class="column-body"><div id="shipment" class="shipment"></div><div id="documents"></div><p class="column-foot"><span data-i18n="documento_sintetico_hecho_fisico_verificado_c31e9e">Documento sintético ≠ hecho físico verificado.</span></p><button id="go-to-verdict" class="evidence-next" hidden><span data-i18n="ya_lei_la_evidencia_tu_veredicto_6cb70d">Ya leí la evidencia · Tu veredicto →</span></button></div>
+      </section>
+      <aside id="challenge-vote" class="challenge-vote column" hidden aria-labelledby="verdict-question">
+        <p class="eyebrow"><span data-i18n="your_verdict_antes_del_motor_514b50">TU VEREDICTO / ANTES DEL MOTOR</span></p>
+        <h3 id="verdict-question"><span data-i18n="esta_confirmada_la_conformidad_documental_de_esta_en_469404">¿Está confirmada la conformidad documental de esta entrega?</span></h3>
+        <p><span data-i18n="evalua_unicamente_los_documentos_la_entrega_fisica_e_a940e3">Evaluá únicamente los documentos. La entrega física es otra pregunta.</span></p>
+        <fieldset id="verdict-choices"><legend><span data-i18n="elegi_una_respuesta_7289b1">Elegí una respuesta</span></legend>
+          <label><input type="radio" name="human-verdict" value="yes"> <span><span data-i18n="si_la_evidencia_confirma_la_conformidad_documental_e44520">Sí, la evidencia confirma la conformidad documental.</span></span></label>
+          <label><input type="radio" name="human-verdict" value="no"> <span><span data-i18n="no_falta_evidencia_valida_para_confirmarla_89e6d0">No, falta evidencia válida para confirmarla.</span></span></label>
+        </fieldset>
+        <button id="challenge-submit" class="replay" disabled><span data-i18n="revelar_decision_de_proof_0c6fd1">Revelar decisión de PROOF</span> <span aria-hidden="true">→</span></button>
+        <p id="challenge-progress" role="status"><span data-i18n="tu_eleccion_permanece_solo_en_esta_interfaz_no_se_en_3e9830">Tu elección permanece solo en esta interfaz. No se envía al motor.</span></p>
+        <small><span data-i18n="sin_entrega_fisica_confirmada_cierre_automatico_stoc_280e12">Sin entrega física confirmada, cierre automático, movimientos de existencias ni acciones externas.</span></small>
+      </aside>
+      <section id="meta-column" class="column meta-column" aria-labelledby="meta-heading">
+        <header class="column-heading"><span class="step">02</span><div><p id="meta-kicker"><span data-i18n="el_registro_072d54">EL REGISTRO</span></p><h3 id="meta-heading"><span data-i18n="interpretacion_de_meta_d5b0e0">Interpretación de Meta</span></h3></div><span class="flow-arrow" aria-hidden="true">→</span></header>
+        <div class="column-body"><div id="interpretation-note" class="interpretation-note"></div><div id="extraction"></div><p class="column-foot"><span data-i18n="selecciona_un_campo_su_cita_se_ilumina_en_la_fuente_9fb0a1">Seleccioná un campo: su cita se ilumina en la fuente.</span></p></div>
+      </section>
+      <section id="proof-column" class="column proof-column" aria-labelledby="proof-heading">
+        <header class="column-heading"><span class="step">03</span><div><p><span data-i18n="lo_que_se_puede_afirmar_5f2c65">LO QUE SE PUEDE AFIRMAR</span></p><h3 id="proof-heading"><span data-i18n="decision_de_proof_89e154">Decisión de PROOF</span></h3></div></header>
+        <div id="decision" class="column-body decision" aria-live="polite" aria-atomic="true"></div>
+      </section>
+    </main>
+    </details>
+    <section class="passport-strip" aria-label="Pasaporte de decisión" data-i18n-aria-label="pasaporte_de_decision_e9f0bf"><svg class="passport-emblem" viewBox="0 0 46 52" aria-hidden="true"><path d="M8 2h22l10 10v38H8zM30 2v12h10M16 24h16M16 32h16M16 40h10"/></svg><div><p class="eyebrow"><span data-i18n="decision_passport_898028">PASAPORTE DE DECISIÓN</span></p><h2><span data-i18n="una_decision_toda_su_historia_d3e03a">Una decisión. Toda su historia.</span></h2><p><span data-i18n="fuentes_citas_controles_y_abstenciones_descargables__4b3a1d">Fuentes, citas, controles y abstenciones. Descargables y reproducibles.</span></p></div><div class="passport-actions"><span id="passport-id" class="mono"><span data-i18n="disponible_despues_de_reproducir_e68943">Disponible después de reproducir</span></span><button id="download-passport" disabled><span data-i18n="descargar_pasaporte_json_3a7422">Descargar pasaporte JSON</span> <span aria-hidden="true">↓</span></button></div></section>
+    <section class="disclosure"><details><summary><span data-i18n="que_es_real_que_se_reproduce_que_sigue_incierto_048ce9">Qué es real. Qué se reproduce. Qué sigue incierto.</span></summary><p><span data-i18n="los_tres_primeros_casos_contienen_una_proyeccion_fie_6243fa">Los tres primeros casos contienen una proyección fiel de extracciones de inferencias reales de META LIVE 02. Aquí se reproducen sin conexión y se vuelven a validar en Python. El cuarto caso es una extracción sintética anotada: no fue inferida por Meta.</span></p><p><span data-i18n="inferencia_meta_en_vivo_no_habilitada_los_fail_histo_dfc3ce">La inferencia Meta en vivo está deshabilitada. Los fallos históricos conservan su resultado. Las huellas digitales comprueban integridad, no autenticidad. Ningún resultado acredita una entrega física ni habilita un cierre automático.</span></p><a href="/classic"><span data-i18n="abrir_la_demostracion_clasica_de_tres_casos_e38a9f">Abrir la demostración clásica de tres casos →</span></a></details><span class="live-disabled"><span data-i18n="cero_llamadas_nuevas_a_meta_8baa0c">CERO LLAMADAS NUEVAS A META</span></span></section>
+    <footer><span><span data-i18n="conocemos_la_calle_ahora_hacemos_visibles_las_decisi_16f6d9">Conocemos la calle. Ahora hacemos visibles las decisiones.</span></span><small><span data-i18n="proof_candidato_de_producto_en_investigacion_meta_gl_faa662">PROOF · candidato de producto en investigación · Meta Global AI Developer Hackathon 2026</span></small></footer>
+  </div>
+</body>
+</html>

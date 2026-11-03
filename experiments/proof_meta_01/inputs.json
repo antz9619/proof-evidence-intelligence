@@ -1,0 +1,186 @@
+[
+  {
+    "case_id": "PM01-01",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-101",
+      "expected_packages": 10
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-101. Estado informado: ENTREGADO."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-101. Recibimos los diez bultos previstos. Firma presente. Identidad del firmante verificada."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-02",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-102",
+      "expected_packages": 6
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-102. Estado informado: ENTREGA_COMPLETA."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-102. Previstos: 6 bultos; recibidos: 6. Firma presente; identidad verificada."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-03",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-103",
+      "expected_packages": 10
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-103. Estado informado: ENTREGADO."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-103. Esperados: diez bultos. Recibidos: ocho. Firma presente. Identidad no verificada."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-04",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-104",
+      "expected_packages": 12
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-104. Estado informado: ENTREGA_COMPLETA. Entrega completa: sí."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-104. Previstos: 12. Recibidos: nueve. Firma presente. Identidad verificada."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-05",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-105",
+      "expected_packages": 10
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-105. Estado informado: ENTREGADO."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-105. Previstos: diez. Cantidad recibida: ilegible. Firma presente. No consta verificación de identidad."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-06",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-106",
+      "expected_packages": 6
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-106. Estado informado: pendiente de confirmación."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-106. Previstos: 6. Recibidos: seis. No consta si existe firma ni si se verificó la identidad."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-07",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-107",
+      "expected_packages": 10
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-PM-107. Estado informado: ENTREGADO."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-OTRO-701. Previstos: diez. Recibidos: diez. Firma presente. Identidad verificada."
+      }
+    ]
+  },
+  {
+    "case_id": "PM01-08",
+    "synthetic": true,
+    "as_of": "2026-10-26T15:00:00-03:00",
+    "shipment": {
+      "id": "SYN-PM-108",
+      "expected_packages": 6
+    },
+    "documents": [
+      {
+        "source_id": "tracking",
+        "authority": "carrier_status",
+        "at": "2026-10-26T14:10:00-03:00",
+        "text": "Envío: SYN-OTRO-802. Estado informado: ENTREGA_COMPLETA. Entrega completa: sí."
+      },
+      {
+        "source_id": "pod",
+        "authority": "document_count",
+        "at": "2026-10-26T14:13:00-03:00",
+        "text": "Envío: SYN-PM-108. Previstos: 6. Recibidos: cuatro. Firma presente. Identidad no verificada."
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "id": "STOCK-01",
+  "synthetic": true,
+  "problem": "Pedido comprometido supera stock libre utilizable; reposición y FEFO deben respetarse",
+  "as_of": "2026-10-26T09:00:00-03:00",
+  "order": {
+    "id": "SYN-STK-3001",
+    "sku": "SKU-SYN-01",
+    "requested_units": 100,
+    "partial_fulfillment_allowed": true
+  },
+  "sources": [
+    {
+      "id": "wms",
+      "authority": "inventory",
+      "lots": [
+        {
+          "lot": "A",
+          "warehouse": "NORTE",
+          "on_hand": 70,
+          "reserved": 0,
+          "expiry": "2026-11-30",
+          "quality_status": "RELEASED"
+        },
+        {
+          "lot": "B",
+          "warehouse": "SUR",
+          "on_hand": 40,
+          "reserved": 25,
+          "expiry": "2026-12-31",
+          "quality_status": "RELEASED"
+        }
+      ]
+    },
+    {
+      "id": "erp",
+      "authority": "order_commitment",
+      "available_transfer_today": false
+    }
+  ],
+  "constraints": [
+    "No asignar más que on_hand - reserved por lote",
+    "Respetar FEFO entre lotes liberados y disponibles",
+    "Transferencia entre depósitos no disponible hoy",
+    "Entrega parcial autorizada"
+  ],
+  "deterministic_expectation": {
+    "lot_A_free": 70,
+    "lot_B_free": 15,
+    "total_free": 85,
+    "shortage_units": 15
+  },
+  "expected_checks": [
+    "Calcular disponibilidad libre sin consumir reservas",
+    "Proponer entrega parcial de hasta 85 con asignación validada",
+    "Tratar 15 restantes como pendiente no comprometido sin reposición confirmada"
+  ],
+  "prohibited_assertions": [
+    "Hay 110 unidades disponibles",
+    "Se pueden usar 25 unidades reservadas",
+    "Las 100 unidades pueden despacharse hoy"
+  ],
+  "success_metric": "Plan de 85 unidades máximo y 15 pendientes sin violar reservas ni FEFO"
+}

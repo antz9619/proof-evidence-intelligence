@@ -1,0 +1,727 @@
+[
+  {
+    "case_id": "PM01-01",
+    "category": "complete",
+    "uncertainty_conditions": [
+      "Solo conformidad documental según declaraciones sintéticas; autenticidad física no establecida."
+    ],
+    "expected_response": {
+      "case_id": "PM01-01",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-101",
+            "quote": "SYN-PM-101"
+          },
+          "status": {
+            "value": "ENTREGADO",
+            "quote": "ENTREGADO"
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-101",
+            "quote": "SYN-PM-101"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 10,
+            "quote": "diez bultos previstos"
+          },
+          "received_packages": {
+            "value": 10,
+            "quote": "Recibimos los diez bultos previstos"
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": true,
+            "quote": "Identidad del firmante verificada"
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": true,
+        "quantity_difference": 0,
+        "documentary_conformity": "CONFIRMED",
+        "proposed_actions": [
+          "REVIEW_DOCUMENTARY_CLOSURE"
+        ],
+        "uncertainties": [
+          "PHYSICAL_DELIVERY_UNVERIFIED"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-02",
+    "category": "complete",
+    "uncertainty_conditions": [
+      "Completitud en status no se copia a delivery_complete sin declaración separada."
+    ],
+    "expected_response": {
+      "case_id": "PM01-02",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-102",
+            "quote": "SYN-PM-102"
+          },
+          "status": {
+            "value": "ENTREGA_COMPLETA",
+            "quote": "ENTREGA_COMPLETA"
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-102",
+            "quote": "SYN-PM-102"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 6,
+            "quote": "Previstos: 6 bultos"
+          },
+          "received_packages": {
+            "value": 6,
+            "quote": "recibidos: 6"
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": true,
+            "quote": "identidad verificada"
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": true,
+        "quantity_difference": 0,
+        "documentary_conformity": "CONFIRMED",
+        "proposed_actions": [
+          "REVIEW_DOCUMENTARY_CLOSURE"
+        ],
+        "uncertainties": [
+          "PHYSICAL_DELIVERY_UNVERIFIED"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-03",
+    "category": "partial",
+    "uncertainty_conditions": [
+      "Diferencia documental de dos; no prueba pérdida o daño.",
+      "ENTREGADO no declara recepción completa."
+    ],
+    "expected_response": {
+      "case_id": "PM01-03",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-103",
+            "quote": "SYN-PM-103"
+          },
+          "status": {
+            "value": "ENTREGADO",
+            "quote": "ENTREGADO"
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-103",
+            "quote": "SYN-PM-103"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 10,
+            "quote": "Esperados: diez bultos"
+          },
+          "received_packages": {
+            "value": 8,
+            "quote": "Recibidos: ocho"
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": false,
+            "quote": "Identidad no verificada"
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": true,
+        "quantity_difference": 2,
+        "documentary_conformity": "UNKNOWN",
+        "proposed_actions": [
+          "KEEP_CLOSURE_PENDING",
+          "REQUEST_ADDITIONAL_EVIDENCE",
+          "VERIFY_SIGNER_IDENTITY"
+        ],
+        "uncertainties": [
+          "PHYSICAL_DELIVERY_UNVERIFIED",
+          "QUANTITY_MISMATCH",
+          "SIGNER_IDENTITY_UNKNOWN"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-04",
+    "category": "partial",
+    "uncertainty_conditions": [
+      "Conflicto explícito entre completitud y recepción parcial; no determina la realidad física."
+    ],
+    "expected_response": {
+      "case_id": "PM01-04",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-104",
+            "quote": "SYN-PM-104"
+          },
+          "status": {
+            "value": "ENTREGA_COMPLETA",
+            "quote": "ENTREGA_COMPLETA"
+          },
+          "delivery_complete": {
+            "value": true,
+            "quote": "Entrega completa: sí"
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-104",
+            "quote": "SYN-PM-104"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 12,
+            "quote": "Previstos: 12"
+          },
+          "received_packages": {
+            "value": 9,
+            "quote": "Recibidos: nueve"
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": true,
+            "quote": "Identidad verificada"
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": true,
+        "quantity_difference": 3,
+        "documentary_conformity": "CONTRADICTORY",
+        "proposed_actions": [
+          "KEEP_CLOSURE_PENDING",
+          "REQUEST_ADDITIONAL_EVIDENCE"
+        ],
+        "uncertainties": [
+          "DOCUMENTARY_CONFLICT",
+          "PHYSICAL_DELIVERY_UNVERIFIED",
+          "QUANTITY_MISMATCH"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-05",
+    "category": "ambiguous",
+    "uncertainty_conditions": [
+      "Cantidad ilegible queda null, no cero.",
+      "Ausencia de registro de verificación de identidad queda null, no false."
+    ],
+    "expected_response": {
+      "case_id": "PM01-05",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-105",
+            "quote": "SYN-PM-105"
+          },
+          "status": {
+            "value": "ENTREGADO",
+            "quote": "ENTREGADO"
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-105",
+            "quote": "SYN-PM-105"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 10,
+            "quote": "Previstos: diez"
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": true,
+        "quantity_difference": null,
+        "documentary_conformity": "UNKNOWN",
+        "proposed_actions": [
+          "KEEP_CLOSURE_PENDING",
+          "REQUEST_ADDITIONAL_EVIDENCE",
+          "VERIFY_SIGNER_IDENTITY"
+        ],
+        "uncertainties": [
+          "PHYSICAL_DELIVERY_UNVERIFIED",
+          "QUANTITY_UNKNOWN",
+          "SIGNER_IDENTITY_UNKNOWN"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-06",
+    "category": "ambiguous",
+    "uncertainty_conditions": [
+      "Estado fuera del vocabulario soportado queda null.",
+      "Firma e identidad desconocidas quedan null, no false."
+    ],
+    "expected_response": {
+      "case_id": "PM01-06",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-106",
+            "quote": "SYN-PM-106"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-106",
+            "quote": "SYN-PM-106"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 6,
+            "quote": "Previstos: 6"
+          },
+          "received_packages": {
+            "value": 6,
+            "quote": "Recibidos: seis"
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": null,
+        "quantity_difference": 0,
+        "documentary_conformity": "UNKNOWN",
+        "proposed_actions": [
+          "KEEP_CLOSURE_PENDING",
+          "REQUEST_ADDITIONAL_EVIDENCE",
+          "VERIFY_SIGNER_IDENTITY"
+        ],
+        "uncertainties": [
+          "PHYSICAL_DELIVERY_UNVERIFIED",
+          "SIGNER_IDENTITY_UNKNOWN",
+          "TRACKING_UNKNOWN"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-07",
+    "category": "foreign_document",
+    "uncertainty_conditions": [
+      "El comprobante es de otro envío; sus diez bultos no se asignan al objetivo."
+    ],
+    "expected_response": {
+      "case_id": "PM01-07",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-PM-107",
+            "quote": "SYN-PM-107"
+          },
+          "status": {
+            "value": "ENTREGADO",
+            "quote": "ENTREGADO"
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-OTRO-701",
+            "quote": "SYN-OTRO-701"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 10,
+            "quote": "Previstos: diez"
+          },
+          "received_packages": {
+            "value": 10,
+            "quote": "Recibidos: diez"
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": true,
+            "quote": "Identidad verificada"
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": true,
+        "quantity_difference": null,
+        "documentary_conformity": "UNKNOWN",
+        "proposed_actions": [
+          "KEEP_CLOSURE_PENDING",
+          "REQUEST_ADDITIONAL_EVIDENCE",
+          "VERIFY_SIGNER_IDENTITY"
+        ],
+        "uncertainties": [
+          "FOREIGN_DOCUMENT",
+          "PHYSICAL_DELIVERY_UNVERIFIED",
+          "QUANTITY_UNKNOWN",
+          "SIGNER_IDENTITY_UNKNOWN"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  },
+  {
+    "case_id": "PM01-08",
+    "category": "foreign_document",
+    "uncertainty_conditions": [
+      "El tracking completo pertenece a otro envío; no acredita entrega del objetivo."
+    ],
+    "expected_response": {
+      "case_id": "PM01-08",
+      "documents": [
+        {
+          "source_id": "tracking",
+          "shipment_id": {
+            "value": "SYN-OTRO-802",
+            "quote": "SYN-OTRO-802"
+          },
+          "status": {
+            "value": "ENTREGA_COMPLETA",
+            "quote": "ENTREGA_COMPLETA"
+          },
+          "delivery_complete": {
+            "value": true,
+            "quote": "Entrega completa: sí"
+          },
+          "expected_packages": {
+            "value": null,
+            "quote": null
+          },
+          "received_packages": {
+            "value": null,
+            "quote": null
+          },
+          "signature_present": {
+            "value": null,
+            "quote": null
+          },
+          "signature_identity_verified": {
+            "value": null,
+            "quote": null
+          }
+        },
+        {
+          "source_id": "pod",
+          "shipment_id": {
+            "value": "SYN-PM-108",
+            "quote": "SYN-PM-108"
+          },
+          "status": {
+            "value": null,
+            "quote": null
+          },
+          "delivery_complete": {
+            "value": null,
+            "quote": null
+          },
+          "expected_packages": {
+            "value": 6,
+            "quote": "Previstos: 6"
+          },
+          "received_packages": {
+            "value": 4,
+            "quote": "Recibidos: cuatro"
+          },
+          "signature_present": {
+            "value": true,
+            "quote": "Firma presente"
+          },
+          "signature_identity_verified": {
+            "value": false,
+            "quote": "Identidad no verificada"
+          }
+        }
+      ],
+      "reasoning": {
+        "delivery_reported": null,
+        "quantity_difference": 2,
+        "documentary_conformity": "UNKNOWN",
+        "proposed_actions": [
+          "KEEP_CLOSURE_PENDING",
+          "REQUEST_ADDITIONAL_EVIDENCE",
+          "VERIFY_SIGNER_IDENTITY"
+        ],
+        "uncertainties": [
+          "FOREIGN_DOCUMENT",
+          "PHYSICAL_DELIVERY_UNVERIFIED",
+          "QUANTITY_MISMATCH",
+          "SIGNER_IDENTITY_UNKNOWN",
+          "TRACKING_UNKNOWN"
+        ],
+        "physical_delivery_verified": false,
+        "automatic_closure_allowed": false
+      }
+    }
+  }
+]

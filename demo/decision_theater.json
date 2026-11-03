@@ -1,0 +1,390 @@
+{
+  "format": "PROOF_PUBLIC_REPLAY_01",
+  "records": [
+    {
+      "id": "PM01-03",
+      "title": "Una palabra de más.",
+      "short_title": "Estado inventado",
+      "input": {
+        "case_id": "PM01-03",
+        "synthetic": true,
+        "as_of": "2026-10-26T15:00:00-03:00",
+        "shipment": {
+          "id": "SYN-PM-103",
+          "expected_packages": 10
+        },
+        "documents": [
+          {
+            "source_id": "tracking",
+            "authority": "carrier_status",
+            "at": "2026-10-26T14:10:00-03:00",
+            "text": "Envío: SYN-PM-103. Estado informado: ENTREGADO."
+          },
+          {
+            "source_id": "pod",
+            "authority": "document_count",
+            "at": "2026-10-26T14:13:00-03:00",
+            "text": "Envío: SYN-PM-103. Esperados: diez bultos. Recibidos: ocho. Firma presente. Identidad no verificada."
+          }
+        ]
+      },
+      "extraction": {
+        "case_id": "PM01-03",
+        "documents": [
+          {
+            "delivery_complete": {
+              "quote": null,
+              "value": null
+            },
+            "expected_packages": {
+              "quote": null,
+              "value": null
+            },
+            "received_packages": {
+              "quote": null,
+              "value": null
+            },
+            "shipment_id": {
+              "quote": "Envío: SYN-PM-103.",
+              "value": "SYN-PM-103"
+            },
+            "signature_identity_verified": {
+              "quote": null,
+              "value": null
+            },
+            "signature_present": {
+              "quote": null,
+              "value": null
+            },
+            "source_id": "tracking",
+            "status": {
+              "quote": "Estado informado: ENTREGADO.",
+              "value": "ENTREGA_COMPLETA"
+            }
+          },
+          {
+            "delivery_complete": {
+              "quote": null,
+              "value": null
+            },
+            "expected_packages": {
+              "quote": "Esperados: diez bultos.",
+              "value": 10
+            },
+            "received_packages": {
+              "quote": "Recibidos: ocho.",
+              "value": 8
+            },
+            "shipment_id": {
+              "quote": "Envío: SYN-PM-103.",
+              "value": "SYN-PM-103"
+            },
+            "signature_identity_verified": {
+              "quote": "Identidad no verificada.",
+              "value": false
+            },
+            "signature_present": {
+              "quote": "Firma presente.",
+              "value": true
+            },
+            "source_id": "pod",
+            "status": {
+              "quote": null,
+              "value": null
+            }
+          }
+        ]
+      },
+      "origin": {
+        "kind": "HISTORICAL_META",
+        "label": "Inferencia real histórica",
+        "record_id": "ML02-01",
+        "model": "muse-spark-1.3",
+        "recorded_outcome": "FAIL_EXTRACTION_STATUS",
+        "source_response_sha256": "6bfef0cc519c462c3b74063d508cdf9eeef02acfe0561edf61948ac88e14a810",
+        "detail": "Salida original de META LIVE 02 sobre documentos sintéticos. Se reproduce offline; no es una inferencia nueva."
+      }
+    },
+    {
+      "id": "PM01-05",
+      "title": "La evidencia que desapareció.",
+      "short_title": "Documento omitido",
+      "input": {
+        "case_id": "PM01-05",
+        "synthetic": true,
+        "as_of": "2026-10-26T15:00:00-03:00",
+        "shipment": {
+          "id": "SYN-PM-105",
+          "expected_packages": 10
+        },
+        "documents": [
+          {
+            "source_id": "tracking",
+            "authority": "carrier_status",
+            "at": "2026-10-26T14:10:00-03:00",
+            "text": "Envío: SYN-PM-105. Estado informado: ENTREGADO."
+          },
+          {
+            "source_id": "pod",
+            "authority": "document_count",
+            "at": "2026-10-26T14:13:00-03:00",
+            "text": "Envío: SYN-PM-105. Previstos: diez. Cantidad recibida: ilegible. Firma presente. No consta verificación de identidad."
+          }
+        ]
+      },
+      "extraction": {
+        "case_id": "PM01-05",
+        "documents": [
+          {
+            "delivery_complete": {
+              "quote": null,
+              "value": null
+            },
+            "expected_packages": {
+              "quote": null,
+              "value": null
+            },
+            "received_packages": {
+              "quote": null,
+              "value": null
+            },
+            "shipment_id": {
+              "quote": "Envío: SYN-PM-105",
+              "value": "SYN-PM-105"
+            },
+            "signature_identity_verified": {
+              "quote": null,
+              "value": null
+            },
+            "signature_present": {
+              "quote": null,
+              "value": null
+            },
+            "source_id": "tracking",
+            "status": {
+              "quote": "Estado informado: ENTREGADO",
+              "value": "ENTREGA_COMPLETA"
+            }
+          }
+        ]
+      },
+      "origin": {
+        "kind": "HISTORICAL_META",
+        "label": "Inferencia real histórica",
+        "record_id": "ML02-02",
+        "model": "muse-spark-1.3",
+        "recorded_outcome": "FAIL_SOURCE_OMISSION",
+        "source_response_sha256": "0c568de6bd4813c0c8163fcc4183c7e67fc6f979f7c556d324a615c901c8454d",
+        "detail": "Salida original de META LIVE 02 sobre documentos sintéticos. Se reproduce offline; no es una inferencia nueva."
+      }
+    },
+    {
+      "id": "PM01-02",
+      "title": "Cuando la evidencia alcanza.",
+      "short_title": "Evidencia conforme",
+      "input": {
+        "case_id": "PM01-02",
+        "synthetic": true,
+        "as_of": "2026-10-26T15:00:00-03:00",
+        "shipment": {
+          "id": "SYN-PM-102",
+          "expected_packages": 6
+        },
+        "documents": [
+          {
+            "source_id": "tracking",
+            "authority": "carrier_status",
+            "at": "2026-10-26T14:10:00-03:00",
+            "text": "Envío: SYN-PM-102. Estado informado: ENTREGA_COMPLETA."
+          },
+          {
+            "source_id": "pod",
+            "authority": "document_count",
+            "at": "2026-10-26T14:13:00-03:00",
+            "text": "Envío: SYN-PM-102. Previstos: 6 bultos; recibidos: 6. Firma presente; identidad verificada."
+          }
+        ]
+      },
+      "extraction": {
+        "case_id": "PM01-02",
+        "documents": [
+          {
+            "delivery_complete": {
+              "quote": null,
+              "value": null
+            },
+            "expected_packages": {
+              "quote": null,
+              "value": null
+            },
+            "received_packages": {
+              "quote": null,
+              "value": null
+            },
+            "shipment_id": {
+              "quote": "SYN-PM-102",
+              "value": "SYN-PM-102"
+            },
+            "signature_identity_verified": {
+              "quote": null,
+              "value": null
+            },
+            "signature_present": {
+              "quote": null,
+              "value": null
+            },
+            "source_id": "tracking",
+            "status": {
+              "quote": "ENTREGA_COMPLETA",
+              "value": "ENTREGA_COMPLETA"
+            }
+          },
+          {
+            "delivery_complete": {
+              "quote": null,
+              "value": null
+            },
+            "expected_packages": {
+              "quote": "Previstos: 6 bultos",
+              "value": 6
+            },
+            "received_packages": {
+              "quote": "recibidos: 6",
+              "value": 6
+            },
+            "shipment_id": {
+              "quote": "SYN-PM-102",
+              "value": "SYN-PM-102"
+            },
+            "signature_identity_verified": {
+              "quote": "identidad verificada",
+              "value": true
+            },
+            "signature_present": {
+              "quote": "Firma presente",
+              "value": true
+            },
+            "source_id": "pod",
+            "status": {
+              "quote": null,
+              "value": null
+            }
+          }
+        ]
+      },
+      "origin": {
+        "kind": "HISTORICAL_META",
+        "label": "Inferencia real histórica",
+        "record_id": "ML02-03",
+        "model": "muse-spark-1.3",
+        "recorded_outcome": "PASS_CASE_ONLY",
+        "source_response_sha256": "96b19afff1f22346cafaee2390d5e5f02e5f74806d03d7329338564311e7f06b",
+        "detail": "Salida original de META LIVE 02 sobre documentos sintéticos. Se reproduce offline; no es una inferencia nueva."
+      }
+    },
+    {
+      "id": "PM01-07",
+      "title": "El documento correcto. El envío equivocado.",
+      "short_title": "Otro envío",
+      "input": {
+        "case_id": "PM01-07",
+        "synthetic": true,
+        "as_of": "2026-10-26T15:00:00-03:00",
+        "shipment": {
+          "id": "SYN-PM-107",
+          "expected_packages": 10
+        },
+        "documents": [
+          {
+            "source_id": "tracking",
+            "authority": "carrier_status",
+            "at": "2026-10-26T14:10:00-03:00",
+            "text": "Envío: SYN-PM-107. Estado informado: ENTREGADO."
+          },
+          {
+            "source_id": "pod",
+            "authority": "document_count",
+            "at": "2026-10-26T14:13:00-03:00",
+            "text": "Envío: SYN-OTRO-701. Previstos: diez. Recibidos: diez. Firma presente. Identidad verificada."
+          }
+        ]
+      },
+      "extraction": {
+        "case_id": "PM01-07",
+        "documents": [
+          {
+            "source_id": "tracking",
+            "shipment_id": {
+              "value": "SYN-PM-107",
+              "quote": "SYN-PM-107"
+            },
+            "status": {
+              "value": "ENTREGADO",
+              "quote": "ENTREGADO"
+            },
+            "delivery_complete": {
+              "value": null,
+              "quote": null
+            },
+            "expected_packages": {
+              "value": null,
+              "quote": null
+            },
+            "received_packages": {
+              "value": null,
+              "quote": null
+            },
+            "signature_present": {
+              "value": null,
+              "quote": null
+            },
+            "signature_identity_verified": {
+              "value": null,
+              "quote": null
+            }
+          },
+          {
+            "source_id": "pod",
+            "shipment_id": {
+              "value": "SYN-OTRO-701",
+              "quote": "SYN-OTRO-701"
+            },
+            "status": {
+              "value": null,
+              "quote": null
+            },
+            "delivery_complete": {
+              "value": null,
+              "quote": null
+            },
+            "expected_packages": {
+              "value": 10,
+              "quote": "Previstos: diez"
+            },
+            "received_packages": {
+              "value": 10,
+              "quote": "Recibidos: diez"
+            },
+            "signature_present": {
+              "value": true,
+              "quote": "Firma presente"
+            },
+            "signature_identity_verified": {
+              "value": true,
+              "quote": "Identidad verificada"
+            }
+          }
+        ]
+      },
+      "origin": {
+        "kind": "SYNTHETIC_ANNOTATION",
+        "label": "Escenario sintético adversarial",
+        "record_id": "ANNOTATED-PM01-07",
+        "model": null,
+        "recorded_outcome": "NOT_A_META_INFERENCE",
+        "source_response_sha256": null,
+        "detail": "Extracción sintética anotada. No proviene de una llamada Meta. Un comprobante ajeno se excluye de la decisión."
+      }
+    }
+  ]
+}

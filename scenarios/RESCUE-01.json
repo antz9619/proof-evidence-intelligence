@@ -1,0 +1,60 @@
+{
+  "id": "RESCUE-01",
+  "synthetic": true,
+  "problem": "Estado informado contradice la falta de confirmación física de despacho",
+  "as_of": "2026-10-26T16:45:00-03:00",
+  "shipment": {
+    "id": "SYN-RES-2048",
+    "sla_deadline": "2026-10-26T18:00:00-03:00"
+  },
+  "sources": [
+    {
+      "id": "tracking",
+      "authority": "informational",
+      "observations": [
+        {
+          "at": "2026-10-26T16:20:00-03:00",
+          "status": "EN_DESTINO"
+        }
+      ]
+    },
+    {
+      "id": "warehouse",
+      "authority": "physical_dispatch_confirmation",
+      "observations": [
+        {
+          "at": "2026-10-26T16:40:00-03:00",
+          "dispatch_confirmation": null,
+          "comment": "No existe confirmación registrada al momento de consulta"
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "authority": "capacity",
+      "observations": [
+        {
+          "at": "2026-10-26T16:42:00-03:00",
+          "available_vehicle_count": 1,
+          "vehicle_assignment_confirmed": false
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    "Ausencia de confirmación no demuestra que el envío nunca salió",
+    "No declarar entrega sin evidencia física",
+    "Reasignación requiere verificar ubicación, custodia y capacidad"
+  ],
+  "expected_checks": [
+    "Identificar discrepancia entre tracking y despacho físico no confirmado",
+    "Pedir verificación de ubicación y despacho",
+    "Proponer recuperación condicional y no reasignar automáticamente"
+  ],
+  "prohibited_assertions": [
+    "El envío está físicamente en destino",
+    "El envío no salió jamás del depósito",
+    "La entrega se realizó"
+  ],
+  "success_metric": "Acción de verificación válida y plan condicionado; no declarar hechos desconocidos"
+}

@@ -1,0 +1,351 @@
+{
+  "original_application_sha": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+  "publication_commit_identity": "A NEW INDEPENDENT ROOT; not the original commit",
+  "file_count_excluding_manifest": 50,
+  "manifest_self": "Not hashed recursively; covered by Git tree and external archive hash",
+  "files": [
+    {
+      "path": ".gitignore",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "b9f586bc8742c992c9ff1a19d37ac255acb77449367c31493c23c8164e4e1cd5",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": ".python-version",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "f50159fad3f4319868eb38717b91d55843c41e9803014c8de05e116a6d0bcfdc",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a24e1c906fe3ac3408046709f9b7a3e91ab57602d46be8dff9f71becf2d9e80e",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "sha256": "8df81783c3c6daf0326ab9da67a314bca39a2b13b90cd3b758bbc59dd0df6402",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "README.md",
+      "sha256": "115eb6b51f410c68c6ad323ee089a2e9061d47561f3219a54bd1c9737691767e",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md",
+      "derived_from_final_prepared_readme_sha256": "412fc0426f1ad78b3da74d2512416d0efc1f5a96e468c8290b9701aeb30ff3f0"
+    },
+    {
+      "path": "demo/decision_theater.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "240290f05b563745f7955936c702664adbc5014888297fe379f2975af6b257a3",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "bf38a372ecc8921dccf07282f467f641f7d5141b1547eb1ff9c443e034b5042f",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "docs/PROVENANCE.md",
+      "sha256": "14fd3049a824b78d3a16f592107bc0da8ccda2ade926ad749a6f62bf33d6cbde",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "docs/RESULTS.md",
+      "sha256": "b87a5802dc4abd707ad95675bae9c5b901db1cc274c7ae6698fa45d62eefe3e5",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "9995990213f1c7a4a819aeab484b9092d1a5ac6fc49ff9b0b2ed077979f53f15",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "docs/VIDEOS.md",
+      "sha256": "ea25b8e895a3074d69a78ff1162e8f4bc30b080e136da8d885cb341e5db59f52",
+      "origin": "new_release_documentation_or_license",
+      "license": "scope_documented_in_LICENSE-SCOPE.md"
+    },
+    {
+      "path": "docs/design-licenses/SOURCES.md",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "b5f2061d85b2b0f21fc526326de28be999d9f464e55bffc492f23a85b2b15a29",
+      "origin": "approved_original_blob",
+      "license": "SIL-OFL-1.1"
+    },
+    {
+      "path": "docs/design-licenses/manrope-OFL.txt",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+      "origin": "approved_original_blob",
+      "license": "SIL-OFL-1.1"
+    },
+    {
+      "path": "docs/design-licenses/newsreader-OFL.txt",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+      "origin": "approved_original_blob",
+      "license": "SIL-OFL-1.1"
+    },
+    {
+      "path": "experiments/proof_meta_01/expected.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "85c62e159ea66ce566fd63327d74563efce4285afb5259bfebac9078b7f777f0",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "experiments/proof_meta_01/inputs.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "3b201c0531c592556c454abf2429b34b77bc15e6ba722cff120a5d8af5ab4f18",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "experiments/proof_meta_01/verified_extraction.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "d129046d3857dfea9c04e4562f213ad439b1c255d86d8675511b9c4839842304",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "proof_baseline.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "41c626f7e17d4c9ad449833f6da98f79e936a9ce796de1f6054ef78b89639165",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "proof_hybrid.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "76fb63b3864dd3ac16865544e1d6a7f5a72591a648571a2c40e1862e3bad7261",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "proof_meta_experiment.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "1247198667d61d9f276507428bd9faeaf0c565cd0fffadc6503afed272390614",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "proof_meta_first_call.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "e4460d637d1bb58a5fbadd915dccc8f7260c6cdf271537d6a504b1d26ad167ac",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "proof_theater.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "5ed453e1e57e7dff0da2ff3d4535a5260d82e523b249d8373b51b1dcdd7fb990",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "proof_web.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "fa1da9584ff558e90308600670feb3a878785cf78f7c6ac37086d046e5e7449f",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "scenarios/PROOF-01.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "54a56a71fede42ebcb0de4325cac00521589c7624de7dc17d2b531f72b01a545",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "scenarios/RESCUE-01.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "9cddc4a64581dfc579caf2037fcc0ea46cb38fe12be53c54ca98eb0fc7b824cd",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "scenarios/STOCK-01.json",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "221d2fd2bfbaa2d5cf570c4efbb6fb51f6c26ccf842c1405ac551dcb996454a4",
+      "origin": "approved_original_blob",
+      "license": "original_synthetic_fixture_or_configuration_no_third_party_grant"
+    },
+    {
+      "path": "scripts/check_proof_i18n_catalog.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "9ae67314b9030a5ddf3223469dac3ae720a46c365c7534fa2d97f424be9d2a2b",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "scripts/check_proof_readiness.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "6b1ee8ac1cfb89aa262b01a1f701b566ab8ac54e3c49874b8b829b378aaf56b3",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_baseline.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "f5daf8ca61b01890ebaffd26236be90a6aeaf08932a6c86b4536be0ad8ce4346",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_i18n.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "96054508c6c5e7edddc18ed1c6233052643627f962fdd8673ce08ff3e04bf6f9",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_meta_experiment.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "9b1ceb4d166b92700497ac4250885a0da11f73507fc880aec5f3b69a6551cd98",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_meta_first_call.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "a89524a5d49b925a9c11f290c4115a79b522f8a563da68ccad27c2f0e7c3a9ed",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_meta_hybrid.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "609357fa447953ea38ed82b3b651863f0078078d48d7895db8999f67475b6fca",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_meta_schema.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "6d74a8ca04e1bf0df8722d00b838c7d37754d392736a89b5fb81d46d796411b9",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_meta_status_guard.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "350c88ce6a1d7e9fb410f5e3a7ea0f2a4260f4bdc5b3b646f2778715616a7188",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_render.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "3892b1581ae6023e08e6499c8bc425f958c790b7a6d5bdf2d7647526ba97a2f5",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_theater.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "82234946bc1094d72f9e60e72d5bad4a5ae12720200e7d5c3360483254adadef",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "tests/test_proof_web.py",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "7a7fc83e86d63745be0c3f3593ad39189f0956d09f24878ec9404cefaecdf00e",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/app.css",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "f61cc5c9b46c33f54d5c317844f27c89742a41f64606d1cc45b00efd38888c50",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/app.js",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "6dd5129be7ec1b7485f9ec6b3405c3949a9d15e872b9fdcfe195a6b4114fb8eb",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/favicon.svg",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "b1a8209df93e6a75297887aecfecabb99499cea4a4ed1e999dc263e13b6502b8",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/i18n-catalogs.js",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "7fd7cd1a84326c1ee200bdd46c210ed8cfc292dc8dce973df5ca119b83ef6917",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/i18n.css",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "aa07980a6530a693d141bb2919620a33771b211e7649e0a5ebc8c2cd86e229f8",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/i18n.js",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "50aa9d2afef0df03a44850447f14a43fbb0639bd5de3490b0d7a245206e84a1e",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/index.html",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "8aa20ca067dfceba492e5164f78c25ccb52b0befb1452ac923d6afc028d9462a",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/proof-manrope.woff",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "7a2d52f7958e8df0c46084aa54a5c4dfdf330c55ad240b8271230b3793e7a82a",
+      "origin": "approved_original_blob",
+      "license": "SIL-OFL-1.1"
+    },
+    {
+      "path": "web/proof-newsreader.woff",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "c043094932e529365bc9df38882483f1bbc7844a6f9367c90da3e0cb4732fbfb",
+      "origin": "approved_original_blob",
+      "license": "SIL-OFL-1.1"
+    },
+    {
+      "path": "web/theater.css",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "6140998f4039c0cebb6ba67245bfe8665e7d5b8517329009d249ab02f8b9e285",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/theater.html",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "e491475a266eff19a0da24d7fbc79c257a35bffcebf1845e110548e93c50bd91",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    },
+    {
+      "path": "web/theater.js",
+      "source_commit": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
+      "sha256": "63e5230d0118ef243107e3764d2a7d49b883db96c46a430fdef1372575d401fb",
+      "origin": "approved_original_blob",
+      "license": "MIT"
+    }
+  ]
+}

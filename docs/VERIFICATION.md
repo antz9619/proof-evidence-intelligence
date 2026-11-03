@@ -1,0 +1,7 @@
+# Export verification
+
+This exact standalone export passed **177/177 unit tests** (zero failures/errors/skips) and **20 local ES/EN browser checks**: two home pages, eight Theater evaluations, six Classic evaluations and four Challenges; fourteen downloads, original-source navigation and English informative presentations. No JavaScript/console errors or unexpected external requests were observed. The test process prohibited non-loopback connections, with no blocked attempts. The application ran without META_MODEL_API_KEY and without private artifacts. The executable code and fixtures in this export are from original commit 4254737206d9bdb21513b81eeb1e65964f0fe7bb. Source hashes and the exact inclusion list are in EXPORT-MANIFEST.json. The private history and its personal metadata are excluded.
+
+The public HTTPS endpoint currently cannot be certified from the preparation environment: its network policy does not allow proof-punta-de-lanza.onrender.com and the external web connector reports it inaccessible. This is an access limitation, not evidence that PROOF is down. Local browser success is not public HTTPS success.
+
+No new Meta inference, deploy, Render modification, original-repository write, remote creation, video publication or form submission is part of this release preparation. All final PASS/FAIL claims name the executed scope. No new human listening panel, model evaluation or broader product redesign is claimed.

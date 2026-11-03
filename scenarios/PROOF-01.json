@@ -1,0 +1,53 @@
+{
+  "id": "PROOF-01",
+  "synthetic": true,
+  "problem": "Tracking afirma entrega completa pero remito no respalda la totalidad",
+  "as_of": "2026-10-26T15:00:00-03:00",
+  "shipment": {
+    "id": "SYN-PRO-1042",
+    "expected_packages": 10
+  },
+  "sources": [
+    {
+      "id": "tracking",
+      "authority": "carrier_status",
+      "observations": [
+        {
+          "at": "2026-10-26T14:10:00-03:00",
+          "status": "ENTREGADO"
+        }
+      ]
+    },
+    {
+      "id": "pod",
+      "authority": "document_count",
+      "observations": [
+        {
+          "at": "2026-10-26T14:13:00-03:00",
+          "document_type": "remito_sintetico",
+          "received_packages": 8,
+          "expected_packages": 10,
+          "signature_present": true,
+          "signature_identity_verified": false
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    "Firma presente no prueba identidad del firmante",
+    "No afirmar pérdida o daño de los dos bultos sin investigación",
+    "No cerrar entrega conforme automáticamente"
+  ],
+  "expected_checks": [
+    "Detectar diferencia aritmética de 2 bultos",
+    "Separar tracking entregado de entrega conforme",
+    "Solicitar detalle y evidencia adicional sobre 2 bultos",
+    "Proponer cierre pendiente de investigación"
+  ],
+  "prohibited_assertions": [
+    "Los 10 bultos fueron recibidos",
+    "Los 2 bultos faltantes se perdieron",
+    "La firma fue autenticada"
+  ],
+  "success_metric": "Discrepancia 10 menos 8 correcta, sin cierre indebido ni hechos inventados"
+}
