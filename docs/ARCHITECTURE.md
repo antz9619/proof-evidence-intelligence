@@ -8,10 +8,14 @@ Python 3.12.14 standard library; local HTML, JavaScript, CSS and two local OFL f
 4. Only admissible extractions reach the deterministic Python quantity/constraint engine.
 5. The interface exposes the result and downloads its Decision Passport.
 
-Run from the exported directory: `python3 -B proof_web.py --port 8765`, then open `http://127.0.0.1:8765/?lang=en`. Spanish is `?lang=es`; Classic is `/classic?lang=es`. Challenge is entered from the Theater home page. `python3 -B -m unittest discover -s tests -v` runs the unchanged suite. Baseline-only reproduction: `python3 -B proof_baseline.py scenarios/PROOF-01.json`.
+Run from the exported directory: `python3 -B proof_web.py --port 8765`, then open `http://127.0.0.1:8765/?lang=en`. Spanish is `?lang=es`; Classic is `/classic?lang=es`. Challenge is entered from the Theater home page. `python3 -B -m unittest discover -s tests -v` runs the software suite (optional PostgreSQL checks require a disposable TLS test database and driver). Baseline-only reproduction: `python3 -B proof_baseline.py scenarios/PROOF-01.json`.
 
 Theater reads the reviewed public synthetic projection. Without optional private artifacts, Classic uses its original annotated offline fallback; that provenance is intentional and no private envelope is required. It does not pretend to be the optional private historical record. The rejection and quantities are still evaluated by the same approved code. Public Render mode already excludes private history.
 
 The supplied client module is retained unchanged to reproduce contract and transport-mock tests. It never sends by default and is not called by the demo. Do not execute connected calls without separate explicit billing/protocol authorization. This export's certification makes zero Meta calls.
 
 Original documents and exact citations stay Spanish. English explanations are informative, not literal sources, and never feed the engine. Unknown is not zero. The strict experimental verifier is not advertised as a deployed interface feature. No OCR, broad semantic understanding, document authentication, physical verification or automatic operational action is claimed.
+
+## Separate Owner LIVE path
+
+The public offline routes do not require Neon or Meta. The optional Owner-authenticated Render path sends a new, explicitly requested Meta extraction, validates it with the same admissibility controls, and persists its attempt/Passport in PostgreSQL. Database access is lazy, so Neon unavailability blocks LIVE rather than offline startup. No fallback to replay or SQLite. One authorized real case completed; see [result](LIVE-RESULT-01.md) and [deployment](LIVE-DEPLOYMENT.md). No key is embedded in the browser or repository.

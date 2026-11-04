@@ -1,7 +1,7 @@
 {
   "original_application_sha": "4254737206d9bdb21513b81eeb1e65964f0fe7bb",
   "publication_commit_identity": "Authorized LIVE extension on independent public history; no private commits imported",
-  "file_count_excluding_manifest": 63,
+  "file_count_excluding_manifest": 64,
   "manifest_self": "Not hashed recursively; covered by Git tree and external archive hash",
   "files": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "c2aac0e5db75911224fa71084042f2d1833ae53e14233bd8c940ac591a8a057d"
+      "sha256": "256b1a6be720331c9ef5ecd599885286f6dc152099ece8d4512ae25a595a3b59"
     },
     {
       "path": "demo/decision_theater.json",
@@ -30,15 +30,19 @@
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "sha256": "bf38a372ecc8921dccf07282f467f641f7d5141b1547eb1ff9c443e034b5042f"
+      "sha256": "59b1d9c93d9ca2bd0a2be2b908cc3b5426c28ea4f5eb6133a2c72080bc40387c"
     },
     {
       "path": "docs/LIVE-DEPLOYMENT.md",
-      "sha256": "235063c09c57375383de1c06eafaf8050be717ab780bde3e5b5cde69da9b06f0"
+      "sha256": "fa8e2502ec7807a3792aeead6011efb185adca1177be19408c5c48d8aacd975d"
+    },
+    {
+      "path": "docs/LIVE-RESULT-01.md",
+      "sha256": "6af34d4e1ec18848d16ae4af36ff224dead55aa443be16bda4602e0325db64a0"
     },
     {
       "path": "docs/PROVENANCE.md",
-      "sha256": "bf5dc70b5a21c46a66389d18458a4290c1d67347e8582ad47c483b82b44b50a7"
+      "sha256": "f97d89f75658cb02aca8cbb76aee9e64f804c07de7169ee3094269784751d718"
     },
     {
       "path": "docs/RESULTS.md",
@@ -46,11 +50,11 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "sha256": "9995990213f1c7a4a819aeab484b9092d1a5ac6fc49ff9b0b2ed077979f53f15"
+      "sha256": "77d85c440b568194d3bd2abc615f6e84cc7e573d96a316a8f6e6416c01c1fbcd"
     },
     {
       "path": "docs/VIDEOS.md",
-      "sha256": "ea25b8e895a3074d69a78ff1162e8f4bc30b080e136da8d885cb341e5db59f52"
+      "sha256": "74b2fdbc40100437354b1fc83593064dcc8a14c40ba54887394d382058d81db0"
     },
     {
       "path": "docs/design-licenses/SOURCES.md",

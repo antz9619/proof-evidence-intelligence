@@ -4,13 +4,14 @@
 
 Built independently for the **Meta Global AI Developer Hackathon 2026 · Indie Developer track**. This is a separate, audited source export prepared for the jury. Synthetic examples only. Research prototype; no affiliation, technical approval or endorsement by Meta is implied.
 
-- **Demo ES:** https://proof-punta-de-lanza.onrender.com/?lang=es
-- **Demo EN:** https://proof-punta-de-lanza.onrender.com/?lang=en
-- **Classic:** https://proof-punta-de-lanza.onrender.com/classic?lang=en
-- **Public repository name proposed:** `antz9619/proof-evidence-intelligence` — not created or published yet.
+- **Demo ES:** https://proof-evidence-intelligence.onrender.com/?lang=es
+- **Demo EN:** https://proof-evidence-intelligence.onrender.com/?lang=en
+- **Classic:** https://proof-evidence-intelligence.onrender.com/classic?lang=en
+- **Public repository:** https://github.com/antz9619/proof-evidence-intelligence
+- **3-minute demo video (EN):** https://youtu.be/opeMI5ywrtw
 - **Original repository:** retained private; its Git history is not part of this export.
 
-The deployed application and AV06 derive from original commit `4254737206d9bdb21513b81eeb1e65964f0fe7bb`. The public source export has its own new root commit; **it is not that original commit and does not inherit its history**. Exported source/assets/fixtures are byte-identical to their approved blobs. [Provenance and inclusion](docs/PROVENANCE.md). Public HTTPS smoke checks from the preparation environment are blocked by its network policy; the links above are demo addresses, not a fresh uptime certification.
+The offline core and AV06 derive from original source commit `4254737206d9bdb21513b81eeb1e65964f0fe7bb`. The independent public export starts at root commit `d3308c9273b7c8b767fa2496d0e8e5f8393ef54e`, without private Git history. The deployed Owner LIVE extension is application revision `69771b455a0656f603491f045626baea030d7bc3`; later documentation commits do not imply a new deploy. [Provenance](docs/PROVENANCE.md) · [Verification scopes](docs/VERIFICATION.md).
 
 ## How it works
 
@@ -24,7 +25,7 @@ Synthetic documents
 
 Muse Spark was called through **Meta Model API** to extract structured facts and source quotes. PROOF checks admissibility before using those facts. The model does not decide inventory, verify physical delivery or authorize closure.
 
-The public demo **replays recorded extractions offline** and runs the existing Python controls again. Clicking evaluate, revealing a Challenge result or downloading a Passport does **not** call Meta. The public Render mode rejects a configured Meta API key; no key is needed to run the demo.
+The public demo **replays recorded extractions offline** and runs the existing Python controls again. Clicking evaluate, revealing a Challenge result or downloading a Passport does **not** call Meta. No key, database or account is needed to run the offline demo. The separate Owner-only LIVE path accepts a server Meta key only under explicit protected LIVE configuration; offline mode rejects that key. Deployment never sends an inference automatically.
 
 ### THE PROOF MOMENT
 
@@ -44,17 +45,17 @@ ES/EN switches presentation only. Spanish original documents and exact quotes st
 
 The Decision Passport records sources, quotes, validation, decision and reproducibility information. Hashes establish integrity, not authenticity. No result permits automatic closure, moves stock or proves a physical delivery.
 
-## Run locally — no runtime dependencies
+## Run the offline demo locally — standard library only
 
 Tested with **Python 3.12.14** (also recorded in `.python-version`). The application uses the Python standard library and local HTML/CSS/JavaScript/fonts. No Node, database, model weights, TTS or API credentials are required.
 
 ```sh
-git clone <OWNER_APPROVED_PUBLIC_REPOSITORY_URL>
-cd <CLONE_DIRECTORY>
+git clone https://github.com/antz9619/proof-evidence-intelligence.git
+cd proof-evidence-intelligence
 python3 -B proof_web.py --port 8765
 ```
 
-The new remote does not exist yet; clone commands become usable only after Owner-authorized publication. For the prepared ZIP, extract it and run the same Python command from its directory. Open `http://127.0.0.1:8765/?lang=en` on the computer running Python; Spanish uses `?lang=es`. Classic is `/classic?lang=es`. The default server binds to loopback. Production hosting configuration is documented in [architecture and execution](docs/ARCHITECTURE.md); these instructions do not authorize a deploy.
+For a source ZIP, extract it and run the same Python command from its directory. Open `http://127.0.0.1:8765/?lang=en` on the computer running Python; Spanish uses `?lang=es`. Classic is `/classic?lang=es`. The default server binds to loopback. Production hosting configuration is documented in [architecture and execution](docs/ARCHITECTURE.md); these instructions do not authorize a deploy.
 
 For an offline deterministic example:
 
@@ -81,9 +82,9 @@ The strict experimental verifier is **not a deployed public-interface capability
 ### Executed evidence
 
 - The certified Impeccable base has a recorded **177-test** suite plus bilingual browser, motion, citation and download evidence: [verification](docs/VERIFICATION.md).
-- This exact export passed **177/177 tests**, with external DNS/connect prohibited in the test process. This is software verification, not new model evaluation.
+- The initial standalone export passed **177/177 tests**, with external DNS/connect prohibited. The LIVE integration application passed **220/220 tests**, including disposable PostgreSQL TLS checks. These are scoped software checks, separate from model evaluation.
 - [Historical Meta results](docs/RESULTS.md), [evaluation boundaries](docs/ARCHITECTURE.md) and [Theater provenance](docs/PROVENANCE.md) summarize the unchanged historical outcomes, separately from current software checks.
-- [Export verification](docs/VERIFICATION.md) distinguishes executed local checks from public-network and video-hosting blockers. Internal historical planning records are deliberately not redistributed.
+- [Verification](docs/VERIFICATION.md) distinguishes local tests, actual Render staging checks, Owner-provided browser/video evidence and remaining submission checks. Internal historical planning records are deliberately not redistributed.
 
 ## Authorship, attribution and licensing
 
@@ -101,17 +102,19 @@ PROOF hace visible la distancia entre un estado logístico, una interpretación 
 
 Theater muestra el caso histórico **6/6/0**; Classic A muestra otro escenario **10/8/2**. No representan el mismo expediente. Las citas originales siguen en español; las traducciones son informativas. El Passport permite inspeccionar y descargar trazabilidad, sin autenticar una entrega física ni autorizar cierre automático.
 
-**STOP: no publicación del repositorio, videos ni envío del formulario hasta la decisión expresa del Owner.**
+El repositorio y el video EN ya están publicados. Una primera inferencia real separada pasó los seis controles de `PM01-02`; la campaña quedó desactivada y con su único intento consumido. La demo pública y AV06 siguen siendo offline/históricos. El envío del formulario todavía no está confirmado.
 
 ## Jury videos
 
-AV06 EN M1 and ES M3 are preserved outside this source export: 180-second H.264/AAC 1080p candidates with SRT/VTT subtitles. The observed submission form requires a public GitHub URL and a 3-minute demo link. No video is published yet; allowed hosts and public/unlisted access requirements remain unconfirmed. [Video identity and limits](docs/VIDEOS.md).
+**[Watch AV06 EN — 3-minute demo](https://youtu.be/opeMI5ywrtw).** The Owner provided evidence of signed-out incognito playback, a watch-player duration of 3:00 and playback through the end. AV06 EN M1 and ES M3 originals remain preserved outside Git (180-second H.264/AAC, 1080p, SRT/VTT); only EN hosting is confirmed here. Neither video is relabeled as the later real LIVE execution. [Video identity and verification limits](docs/VIDEOS.md).
 
 
-## Owner-only LIVE candidate
+## Owner-only LIVE integration
 
 This revision adds an optional, separately authenticated Owner panel at `/live`. The public historical/offline demo does not require Neon or Meta and remains available if either provider is down. LIVE starts disarmed and requires an authenticated Owner action; deployment never sends a model request. Only approved synthetic PM01-02 is allowed in cloud.
 
 Optional cloud installation: `pip install -r requirements-live.txt`. Render start: `python -B proof_web.py --mode render`. PostgreSQL requires TLS certificate and hostname verification. Server-only secrets and an explicitly provisioned campaign are required; no secret belongs in browser code or Git. The initial real campaign permits one attempt with a US$0.05 accounting reservation, not a guaranteed provider billing cap. No automatic retries, fallback, reservation refund or stale-attempt expiry.
 
-Model target: muse-spark-1.3 Standard. Simulated staging results are marked SIMULATED_NO_META_CALL; historical replay and any future NEW_META_INFERENCE remain distinct. This code publication does not assert that a new paid inference occurred. See [LIVE deployment and rollback](docs/LIVE-DEPLOYMENT.md).
+A separately authorized **real `muse-spark-1.3` Standard inference** completed from Render on 4 November 2026: `PM01-02`, HTTP 200, six checks PASS, documentary difference 0, no physical verification or automatic closure. Its Passport matches the record persisted in Neon and independently revalidates offline. The campaign is disabled, with **1/1 attempt consumed**. This single-case result does not establish general reliability and does not change historical FAILs. [Real-call result](docs/LIVE-RESULT-01.md).
+
+Simulated staging is marked `SIMULATED_NO_META_CALL`; the actual call is `NEW_META_INFERENCE`; historical replay remains separate. Further requests require a new explicit Owner decision, without resetting the completed campaign. See [LIVE deployment and rollback](docs/LIVE-DEPLOYMENT.md).

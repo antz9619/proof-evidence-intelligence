@@ -9,3 +9,7 @@ Staging uses only SimulatedProvider and no Meta key. An opt-in startup certifica
 Real transport configuration is Render-only and additionally requires PROOF_LIVE_CALL_AUTHORIZED=1, explicit LIVE configuration and server Meta key. Do not configure it until the Owner separately authorizes the first payable request. Initial real case is pinned PM01-02, model muse-spark-1.3 Standard, 4096 completion-token cap, one POST and no retry/fallback. Missing/invalid response never becomes invented extraction or replay.
 
 Rollback: retain original deploy snapshot and commit d3308c9273b7c8b767fa2496d0e8e5f8393ef54e. Disable campaign and LIVE, remove Meta key, then deploy the retained prior artifact or prior commit after verifying the source/config identity. Do not rewrite Git or erase PostgreSQL attempts. Previous offline code must not start with a Meta key configured. Autodeploy stays OFF. Database schema is additive and does not affect the original offline revision.
+
+## Recorded deployment and first call
+
+The application extension is deployed at69771b455a0656f603491f045626baea030d7bc3. A subsequent configuration-only deploy enabled the separately authorized real provider; deployment itself sent no request. The authenticated Owner initiated one PM01-02 request and obtained the result recorded in [LIVE result](LIVE-RESULT-01.md). The real campaign is now disabled with its only attempt consumed. Setup instructions above describe configuration, not authorization to re-enable/reset that completed campaign. Autodeploy remains OFF.
