@@ -9,7 +9,25 @@ from email.message import Message
 
 def main():
  if os.environ.get('PROOF_CLOUD_CERTIFY') != '1':raise RuntimeError('Explicit staging certification required')
- url=os.environ['DATABASE_URL'];campaign='staging-cert-'+uuid.uuid4().hex
+ url=os.environ['DATABASE_URL']
+ import psycopg
+ try:
+  with psycopg.connect(url,connect_timeout=5,options='-c statement_timeout=5000 -c lock_timeout=3000') as diagnostic:pass
+ except Exception as error:
+  message=str(error).lower()
+  categories=[name for name,patterns in {
+   'TLS_ROOT_MISSING':['root certificate file','sslrootcert'],
+   'TLS_VERIFY_FAILED':['certificate verify failed','certificate validation'],
+   'AUTH_FAILED':['password authentication failed','authentication failed'],
+   'DNS_FAILED':['resolve','name or service not known','translate host'],
+   'CONNECT_TIMEOUT':['timeout expired','connection timed out'],
+   'DATABASE_OR_ROLE':['does not exist'],
+   'INVALID_CONNECTION_OPTION':['invalid connection option','unsupported startup parameter','invalid value for parameter'],
+   'CONNECTION_REFUSED':['connection refused'],
+  }.items() if any(pattern in message for pattern in patterns)]
+  print(json.dumps({'event':'PROOF_DB_DIAGNOSTIC','categories':categories or ['UNCLASSIFIED'],'exception_type':type(error).__name__}),flush=True)
+  raise RuntimeError('Safe database diagnostic failed; raw details suppressed') from None
+ campaign='staging-cert-'+uuid.uuid4().hex
  ledger=Ledger(url,campaign)
  with ledger.connect() as db:
   previous=db.execute("SELECT count(*) FROM proof_live_attempt WHERE campaign LIKE 'staging-cert-%' AND state='DONE'").fetchone()[0]

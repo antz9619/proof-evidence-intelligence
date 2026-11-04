@@ -138,7 +138,7 @@
     },
     {
       "path": "scripts/certify_live_cloud.py",
-      "sha256": "e00df68a9da671e12e0efa23ffe8c7d4bf3932b04617e8198be1f969c1b68d8f"
+      "sha256": "49f273891e4307f35e6b2a8b24fda6a882577905b1947524c696dddfd2272da1"
     },
     {
       "path": "scripts/check_proof_i18n_catalog.py",
