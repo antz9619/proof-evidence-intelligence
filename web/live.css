@@ -1,0 +1,8 @@
+.live-panel {margin:2rem auto; max-width:78rem; padding:2rem; background:#f5f3e9; color:#132e29; border:2px solid #567052; border-radius:1rem}
+.live-panel h1 {font-size:2.4rem; margin:.5rem 0}
+.live-panel p,.live-panel label {font-size:1rem;line-height:1.6}
+.live-panel button,.live-panel select {font:inherit; margin:.5rem; padding:.8rem; min-height:44px}
+.live-panel pre {white-space:pre-wrap; overflow-wrap:anywhere; font-size:15px;line-height:1.5;max-height:35rem;overflow:auto;background:#fff;padding:1rem}
+.live-panel :focus-visible {outline:3px solid #527000;outline-offset:3px}
+.live-source {padding:1rem;border:1px solid #71916b;margin:.75rem 0;background:white}
+@media(max-width:600px){.live-panel{margin:.5rem;padding:1rem}.live-panel h1{font-size:1.8rem}.live-panel button{display:block;margin:.5rem 0}}

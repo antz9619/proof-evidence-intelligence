@@ -10,12 +10,14 @@ import os
 from pathlib import Path
 import re
 import time
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs
 import uuid
 
 import proof_hybrid
 import proof_meta_experiment as experiment
 import proof_theater
+import proof_live
+import proof_live_web
 
 
 ROOT = Path(__file__).resolve().parent
@@ -192,9 +194,22 @@ class ProofHandler(BaseHTTPRequestHandler):
         if not self._allowed_request():
             return
         path = urlsplit(self.path).path
+        if path in {'/live', '/api/live/status'}:
+            proof_live_web.get(self, path)
+            return
+        if path in {'/proof-live.js', '/proof-live.css'} and getattr(self.server, 'live_service', None):
+            name = 'live.js' if path.endswith('.js') else 'live.css'
+            self._send(200, (ROOT / 'web' / name).read_bytes(), 'text/javascript; charset=utf-8' if name.endswith('.js') else 'text/css; charset=utf-8')
+            return
         if path in ASSETS:
             name, mime = ASSETS[path]
-            self._send(200, (ROOT / "web" / name).read_bytes(), mime)
+            raw = (ROOT / "web" / name).read_bytes()
+            if path == '/' and getattr(self.server, 'live_service', None):
+                lang = 'en' if parse_qs(urlsplit(self.path).query).get('lang', ['es'])[0] == 'en' else 'es'
+                link = ('<body><p class="provenance-bar"><a id="live-entry" href="/live?lang=' + lang + '">META LIVE · REAL INFERENCE / Owner only</a></p>').encode()
+                raw = raw.replace(b'<body>', link)
+                raw = raw.replace(b'</head>', b'<script src="/proof-live.js" defer></script></head>')
+            self._send(200, raw, mime)
         elif path == "/api/cases":
             self._json(200, {"cases": [load_demo(key, historical=self.server.proof_mode == "local") for key in CASES],
                              "live_inference_enabled": False, "deployment_mode": self.server.proof_mode})
@@ -212,6 +227,9 @@ class ProofHandler(BaseHTTPRequestHandler):
         if not self._allowed_request():
             return
         path = urlsplit(self.path).path
+        if path in {'/api/live/infer', '/api/live/disable', '/api/live/enable'}:
+            proof_live_web.post(self, path)
+            return
         if path not in {"/api/evaluate", "/api/theater/evaluate"}:
             self._json(404, {"error": "Ruta no disponible."})
             return
@@ -259,28 +277,38 @@ def make_server(port=8765, *, mode="local", allowed_hosts=()):
     return server
 
 
-def configured_server(*, mode="local", port=None, environ=None):
-    if mode == "local":
+def configured_server(*, mode="local", port=None, environ=None, live_opt_in=False):
+    if mode == "local" and not live_opt_in:
         return make_server(8765 if port is None else port)
+    config = os.environ if environ is None else environ
+    if mode == "local":
+        live = proof_live.configure(config, mode)
+        server = make_server(8765 if port is None else port)
+        server.live_service, server.live_root = live, ROOT
+        return server
     if mode != "render" or port is not None:
         raise ValueError("En modo render se requiere PORT; no usar --port")
     config = os.environ if environ is None else environ
-    if config.get("META_MODEL_API_KEY"):
+    live = proof_live.configure(config, mode)  # R1 Render fails closed before accepting a key.
+    if config.get("META_MODEL_API_KEY") and live is None:
         raise ValueError("Eliminar META_MODEL_API_KEY del servicio Render: la inferencia está deshabilitada")
     configured_port = config.get("PORT", "")
     if not re.fullmatch(r"[0-9]{1,5}", configured_port) or not 1 <= int(configured_port) <= 65535:
         raise ValueError("PORT es obligatorio y debe ser un entero entre 1 y 65535")
     hosts = parse_allowed_hosts(config.get("PROOF_ALLOWED_HOSTS", ""))
-    return make_server(int(configured_port), mode="render", allowed_hosts=hosts)
+    server = make_server(int(configured_port), mode="render", allowed_hosts=hosts)
+    server.live_service, server.live_root = live, ROOT
+    return server
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mode", choices=("local", "render"), default="local")
     parser.add_argument("--port", type=int, help="Puerto local; en modo render se usa PORT del entorno")
+    parser.add_argument("--live", action="store_true", help="Explicit local LIVE opt-in; requires separate server configuration")
     args = parser.parse_args()
     try:
-        server = configured_server(mode=args.mode, port=args.port)
+        server = configured_server(mode=args.mode, port=args.port, live_opt_in=args.live)
     except ValueError as error:
         parser.error(str(error))
     with server:

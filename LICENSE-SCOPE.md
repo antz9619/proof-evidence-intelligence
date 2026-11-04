@@ -40,3 +40,7 @@ The Owner expressly authorized MIT for original PROOF code in this release. Copy
 Original synthetic fixture data, configuration and newly prepared jury documentation accompany the export for demonstration and reproducibility; no new blanket MIT grant is asserted over these non-code materials. No rights are granted over material of unverified ownership. Model weights, voices, AV05/AV06 videos, API service outputs other than the reviewed synthetic public projection, private API envelopes and third-party binaries are not redistributed. The approved synthetic public projection in `demo/decision_theater.json` is deliberately labelled historical or annotated and remains factually unchanged.
 
 Meta Model API remains a separately governed service. No Meta SDK is bundled. The font tools, reference skill projects and audiovisual tools are not redistributed as code dependencies.
+
+## Original LIVE extension code
+
+MIT also covers proof_live.py, proof_live_transport.py, proof_live_web.py, proof_live_postgres.py, web/live.js, web/live.css, web/live-panel.html, scripts/certify_live_cloud.py, new LIVE tests and migrations/001_proof_live_postgres.sql. Optional psycopg/psycopg-binary is installed separately under its own upstream licenses (LGPL-3.0 for psycopg); no dependency binary is redistributed or relicensed here. Font OFL scopes remain unchanged.

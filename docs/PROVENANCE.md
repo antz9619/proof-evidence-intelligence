@@ -1,3 +1,7 @@
+# LIVE extension provenance
+
+The original independent export is root commit d3308c9273b7c8b767fa2496d0e8e5f8393ef54e. This authorized revision adds Owner LIVE integration and PostgreSQL persistence on that public history, without importing private Git history. The original source snapshot described below remains the provenance of the offline core; statements that all code is byte-identical apply to that initial snapshot, not to the new HTTP adapter. Baseline, hybrid validation, scenarios and historical evaluation fixtures are preserved.
+
 # Source export provenance
 
 The original application source is commit `4254737206d9bdb21513b81eeb1e65964f0fe7bb` of the private project. The deployed application and AV06 derive from that original commit, as recorded in the previous certified release. This mission did not redeploy or reverify its public endpoint successfully.

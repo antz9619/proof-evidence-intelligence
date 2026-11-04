@@ -106,3 +106,12 @@ Theater muestra el caso histórico **6/6/0**; Classic A muestra otro escenario *
 ## Jury videos
 
 AV06 EN M1 and ES M3 are preserved outside this source export: 180-second H.264/AAC 1080p candidates with SRT/VTT subtitles. The observed submission form requires a public GitHub URL and a 3-minute demo link. No video is published yet; allowed hosts and public/unlisted access requirements remain unconfirmed. [Video identity and limits](docs/VIDEOS.md).
+
+
+## Owner-only LIVE candidate
+
+This revision adds an optional, separately authenticated Owner panel at `/live`. The public historical/offline demo does not require Neon or Meta and remains available if either provider is down. LIVE starts disarmed and requires an authenticated Owner action; deployment never sends a model request. Only approved synthetic PM01-02 is allowed in cloud.
+
+Optional cloud installation: `pip install -r requirements-live.txt`. Render start: `python -B proof_web.py --mode render`. PostgreSQL requires TLS certificate and hostname verification. Server-only secrets and an explicitly provisioned campaign are required; no secret belongs in browser code or Git. The initial real campaign permits one attempt with a US$0.05 accounting reservation, not a guaranteed provider billing cap. No automatic retries, fallback, reservation refund or stale-attempt expiry.
+
+Model target: muse-spark-1.3 Standard. Simulated staging results are marked SIMULATED_NO_META_CALL; historical replay and any future NEW_META_INFERENCE remain distinct. This code publication does not assert that a new paid inference occurred. See [LIVE deployment and rollback](docs/LIVE-DEPLOYMENT.md).
