@@ -31,7 +31,7 @@ def main():
  ledger=Ledger(url,campaign)
  with ledger.connect() as db:
   previous=db.execute("SELECT count(*) FROM proof_live_attempt WHERE campaign LIKE 'staging-cert-%' AND state='DONE'").fetchone()[0]
-  assert db.info.ssl_in_use
+  assert db.pgconn.ssl_in_use
   backend_ssl=db.execute('SELECT ssl FROM pg_stat_ssl WHERE pid=pg_backend_pid()').fetchone()[0]
   db.execute('INSERT INTO proof_live_campaign VALUES(%s,1,false,0.05,0.05)',(campaign,))
  service=live.Service(ledger,secrets.token_urlsafe(40),provider=live.SimulatedProvider())
