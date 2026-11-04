@@ -31,7 +31,8 @@ def main():
  ledger=Ledger(url,campaign)
  with ledger.connect() as db:
   previous=db.execute("SELECT count(*) FROM proof_live_attempt WHERE campaign LIKE 'staging-cert-%' AND state='DONE'").fetchone()[0]
-  assert db.execute('SELECT ssl FROM pg_stat_ssl WHERE pid=pg_backend_pid()').fetchone()[0]
+  assert db.info.ssl_in_use
+  backend_ssl=db.execute('SELECT ssl FROM pg_stat_ssl WHERE pid=pg_backend_pid()').fetchone()[0]
   db.execute('INSERT INTO proof_live_campaign VALUES(%s,1,false,0.05,0.05)',(campaign,))
  service=live.Service(ledger,secrets.token_urlsafe(40),provider=live.SimulatedProvider())
  headers=Message();headers['Authorization']=service.authorization;service.authorize(headers)
@@ -78,6 +79,6 @@ def main():
   assert json.loads(fetch('/api/live/enable',True,b'{}').read())['request_sent'] is False
   assert json.loads(fetch('/api/live/disable',True,b'{}').read())['status']=='DISABLED'
  finally:server.shutdown();server.server_close();thread.join()
- print(json.dumps({'event':'PROOF_CLOUD_CERTIFICATION','status':'PASS','tls':True,'render_mode_smoke':True,'anonymous_http_rejected':True,'owner_http_authenticated':True,'owner_enable_sent_no_request':True,'previous_durable_attempts':previous,'owner_auth':True,'live_off_rejected':True,'simultaneous_requests':2,'reserved':1,'simulated_evaluations':1,'passport':True,'new_meta_calls':0,'campaign':campaign}),flush=True)
+ print(json.dumps({'event':'PROOF_CLOUD_CERTIFICATION','status':'PASS','tls':True,'tls_verified_at_client':True,'postgres_backend_reports_ssl':backend_ssl,'render_mode_smoke':True,'anonymous_http_rejected':True,'owner_http_authenticated':True,'owner_enable_sent_no_request':True,'previous_durable_attempts':previous,'owner_auth':True,'live_off_rejected':True,'simultaneous_requests':2,'reserved':1,'simulated_evaluations':1,'passport':True,'new_meta_calls':0,'campaign':campaign}),flush=True)
 
 if __name__=='__main__':main()
